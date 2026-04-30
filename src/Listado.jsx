@@ -1,8 +1,10 @@
+import {peliculaCard} from "./Pelicula"
+
 function Listado({peliculas}){
     return(
         <ul>
             {peliculas.map(peliculas=>(
-                <li>hola</li>
+                <peliculaCard pelicula = {peliculas[i]}/>
             ))}
         </ul>
     )

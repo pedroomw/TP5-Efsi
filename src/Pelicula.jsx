@@ -1,10 +1,12 @@
-function peliculaCard(){
+function peliculaCard(pelicula){
     return(
         <>
-            <h2>${search[i].Title}</h2>
-            <h2>${search[i].Year}</h2>
-            <h4>${search[i].imdbID}</h4>
-            <button onClick = {mostrarPelicula()} type = "button">Expandir</button>
+            <h2>${pelicula.Title}</h2>
+            <h2>${pelicula.Year}</h2>
+            <h4>${pelicula.imdbID}</h4>
+            <button onClick = {mostrarPelicula(pelicula.imdbID)} type = "button">Expandir</button>
         </>
     )
 }
+
+export {peliculaCard}
