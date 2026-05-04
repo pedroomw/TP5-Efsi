@@ -1,5 +1,6 @@
-import api from "./API.js"
+import api from "../API.js"
 import {useState} from "react"
+import './Busqueda.css'
 
 function Busqueda({setPeliculas}){
     const[nombre, setNombre] = useState()
@@ -9,12 +10,20 @@ function Busqueda({setPeliculas}){
         api.get(`/?s=${nombre}&apikey=f2885c6e`)
         .then((res) => {
             let data = res.data 
-            setPeliculas(data.Search)
+            if(data.Response === "True")
+            {
+                setPeliculas(data.Search)
+            } else { 
+                alert("No se encontraron peliculas")
+                setPeliculas([])
+            }
+            
         })
     }
 
 
     return(
+        <div className = "busqueda-container">
         <form onSubmit={manejarBusqueda}>
             <label htmlFor="nombre">Ingrese el nombre de la pelicula</label>
             <input
@@ -30,6 +39,7 @@ function Busqueda({setPeliculas}){
                 Buscar
             </button>
         </form>
+        </div>
     )
 }
 

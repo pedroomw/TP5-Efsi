@@ -1,6 +1,6 @@
 import { useState , useEffect} from 'react'
-import { Busqueda } from './Busqueda.jsx'
-import Listado from "./Listado.jsx"
+import { Busqueda } from '../Busqueda/Busqueda.jsx'
+import Listado from "../Listado/Listado.jsx"
 
 function App(){
 
