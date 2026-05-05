@@ -14,7 +14,7 @@ function App(){
     {detalle === "" ? (
         <Listado peliculas={peliculas} setDetalle={setDetalle} />
       ) : (
-        <Pelicula id={detalle} setDetalle={setDetalle} />
+        <Pelicula detalle={detalle}/>
       )}
     </>
   )

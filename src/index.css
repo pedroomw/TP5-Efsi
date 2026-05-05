@@ -1,3 +1,20 @@
-*{
-    background-color: #141414;
+:root {
+  --primary: #e50914; /* Rojo Netflix */
+  --bg-dark: #141414;
+  --bg-card: #1f1f1f;
+  --text-main: #ffffff;
+  --text-dim: #b3b3b3;
+  --font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font);
+}
+
+* {
+  box-sizing: border-box;
 }

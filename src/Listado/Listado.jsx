@@ -3,7 +3,7 @@ import './Listado.css'
 
 function Listado({peliculas, setDetalle}){
     return(
-        <section className = "peliculas-container">
+        <section className = "listado-grid">
         <ul>
             {peliculas.map((pelicula)=>(
                 <PeliculaCard 
