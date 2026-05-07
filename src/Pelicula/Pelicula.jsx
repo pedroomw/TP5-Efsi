@@ -2,7 +2,7 @@ import './Pelicula.css'
 import api from '../API.js'
 import { useState , useEffect} from 'react'
 
-const Pelicula = ({detalle}) => {
+const Pelicula = ({detalle, setDetalle}) =>  {
     const [pelicula, setPelicula] = useState("")
     console.log(detalle)
     useEffect(() => {
@@ -17,8 +17,19 @@ const Pelicula = ({detalle}) => {
     } else{
         return(
         <div className = "detalleContainer">
+        <button className="btn-volver" onClick={() => setDetalle("")}>← Volver</button>
         <h1>{pelicula.Title}</h1>
-        <h2>{pelicula.Year}</h2>
+        <h2 className="Titulo"> Año:</h2>
+        <h2 className="Info">{pelicula.Year}</h2>
+        <h2 className="Titulo"> Genero:</h2>
+        <h2 className="Info"> {pelicula.Genre}</h2>
+        <h2 className="Titulo">Director:</h2>
+        <h2 className="Info">{pelicula.Director}</h2>
+        <h2 className="Titulo">Elenco:</h2>
+        <h2 className="Info">{pelicula.Actors}</h2>
+        <h2 className="Titulo">Pais de origen:</h2>
+        <h2 className="Info">{pelicula.Country}</h2>
+        <h2>⭐{pelicula.imdbRating }⭐</h2>
         <img src={pelicula.Poster} alt="" />
         </div>
     )}

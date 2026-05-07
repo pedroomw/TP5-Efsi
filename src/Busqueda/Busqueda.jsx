@@ -25,7 +25,7 @@ function Busqueda({setPeliculas}){
     return(
         <div className = "busqueda-container">
         <form onSubmit={manejarBusqueda}>
-            <label htmlFor="nombre">Ingrese el nombre de la pelicula</label>
+            <label htmlFor="nombre">Ingrese el nombre de la pelicula </label>
             <input
             type="text"
             id="nombre"
